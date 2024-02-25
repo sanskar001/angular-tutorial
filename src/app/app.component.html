@@ -1,3 +1,10 @@
 <h1>App Heading</h1>
+<p>From Child component: {{ message }}</p>
 
 <app-navbar></app-navbar>
+<app-post
+  [fromParent]="parentMessage"
+  (messageEvent)="messageEventHandler($event)"
+></app-post>
+
+<!-- <p>MessagePost: {{ messagePost }}</p> -->
