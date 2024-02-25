@@ -1,17 +1,16 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PostComponent } from './post/post.component';
 
-/*
+/* Chapter: String Interpolation => Expression
 
-2. Child to parent component via "@ViewChild" decorator.
-  Eg. @ViewChild(app-child-selector or ChildComponent) => component;
+  title: string = "Angular Title"
+  <h1>{{title}}</h1>
+  <p>{{10 + 20}}</p> => 30
 
------ ngAfterViewInit() -----
-
-- It is component lifecycle hook which execute after the total view initialized on the browser DOM.
-
+  Note: We can show string, number, boolean or any other types;
+  Note: It acts like JSX expression in React.
 */
 
 @Component({
@@ -21,19 +20,8 @@ import { PostComponent } from './post/post.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
   title: string = 'angular-tutorial';
-  message: string = '';
-  parentMessage: string = 'This is message coming from parent component';
-  @ViewChild(PostComponent) childComp: any;
 
   constructor() {}
-
-  ngAfterViewInit(): void {
-    this.message = this.childComp.childMessage;
-  }
-
-  messageEventHandler(msg: string) {
-    this.message = msg;
-  }
 }

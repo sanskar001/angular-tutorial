@@ -52,19 +52,7 @@ Chapter: SHARE DATA BETWEEN COMPONENTS
   styleUrl: './post.component.css',
 })
 export class PostComponent implements OnInit {
-  @Input() fromParent: string = '';
-  @Output() messageEvent: EventEmitter<string> = new EventEmitter();
-
-  title: string = 'Custom Post';
-  postParentMessage: string = 'Message coming from post parent.';
-  childMessage: string = 'From child post component.';
-  outputChildMessage: string = 'Message from child compoennt view Ouptut.';
-
   constructor() {}
 
   ngOnInit(): void {}
-
-  clickHandler() {
-    this.messageEvent.emit(this.outputChildMessage);
-  }
 }
