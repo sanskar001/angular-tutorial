@@ -1,7 +1,7 @@
-<h1>App Heading - {{ title }}</h1>
+<!-- <h1 class="text-red">App Heading - {{ title }}</h1> -->
 
-<!-- String Interpolation -->
-<!-- <img src="{{ imgUrl }}" alt="Image Alter text" /> -->
+<!-- ========== CLASS BINDING ============ -->
 
-<!-- Better Approach - Property Binding -->
-<img [src]="imgUrl" alt="Image Alter text" />
+<!-- Class "text-red" is apply when condition => true  -->
+
+<h1 [class.text-red]="condition">CSS Class Binding</h1>

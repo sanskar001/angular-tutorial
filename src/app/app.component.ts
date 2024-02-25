@@ -9,8 +9,8 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title: string = 'angular-tutorial';
-  imgUrl: string = 'https://angular.io/assets/images/logos/angular/angular.png';
+  title: string = 'Angular-tutorial';
+  condition: boolean = true;
 
   constructor() {}
 }
