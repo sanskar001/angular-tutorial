@@ -1,5 +1,12 @@
 <h1>Angular tutorial</h1>
 
-<!-- EVENT BINDING -->
+<!-- console somthing when we enter "Enter" key in Input -->
 
-<button (click)="clickHandler()">Click Me</button>
+<!-- TRADITIONAL APPROACH -->
+
+<!-- <input type="text" (keyup)="onKeyup($event)" /> -->
+
+<!-- EVENT FILTERING -->
+
+<input type="text" (keyup.enter)="onKeyup()" />
+<!-- <input type="text" (keyup.a)="onKeyup()" /> -->
