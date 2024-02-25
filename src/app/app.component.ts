@@ -9,7 +9,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  condition: boolean = false;
-
   constructor() {}
+
+  clickHandler() {
+    console.log('Button Clicked!');
+  }
 }
