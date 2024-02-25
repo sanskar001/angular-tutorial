@@ -1,9 +1,8 @@
 <h1>Angular tutorial</h1>
 
-<!-- TEMPLATE VARIABLE -->
+<!-- <input type="text" (keyup)="onKeyup(username.value)" #username /> -->
 
-<!-- Suppose: In any case if we want to get the typed value this Input element field-->
+<!-- TWO WAY DATA BINDING -->
 
-<!-- <input type="text" (keyup.enter)="onKeyup($event)" /> -->
-
-<input type="text" (keyup)="onKeyup(username.value)" #username />
+<input type="text" [(ngModel)]="username" />
+<button type="submit" (click)="submitHandler()">Submit</button>

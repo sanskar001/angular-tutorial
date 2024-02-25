@@ -1,27 +1,24 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  username: string = '';
+
   constructor() {}
 
-  // TRADITIONAL APPORACH
-
-  // onKeyup($event: any) {
-  //   // This below code run when we enter "Enter" key
-  //   console.log('Enter key pressed: ', $event.target.value);
+  // onKeyup(value: string) {
+  //   console.log('Username:', value);
   // }
 
-  // TEMPLATE VARAIABLE APPORACH
-
-  onKeyup(value: string) {
-    // This below code run when we enter "Enter" key
-    console.log('Enter key pressed: ', value);
+  submitHandler() {
+    console.log('Two way data-binding:', this.username);
   }
 }
