@@ -1,12 +1,9 @@
 <h1>Angular tutorial</h1>
 
-<!-- console somthing when we enter "Enter" key in Input -->
+<!-- TEMPLATE VARIABLE -->
 
-<!-- TRADITIONAL APPROACH -->
+<!-- Suppose: In any case if we want to get the typed value this Input element field-->
 
-<!-- <input type="text" (keyup)="onKeyup($event)" /> -->
+<!-- <input type="text" (keyup.enter)="onKeyup($event)" /> -->
 
-<!-- EVENT FILTERING -->
-
-<input type="text" (keyup.enter)="onKeyup()" />
-<!-- <input type="text" (keyup.a)="onKeyup()" /> -->
+<input type="text" (keyup)="onKeyup(username.value)" #username />

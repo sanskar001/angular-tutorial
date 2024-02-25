@@ -11,23 +11,17 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   constructor() {}
 
-  // Traditional Approach
+  // TRADITIONAL APPORACH
 
-  // onKeyup($event: KeyboardEvent) {
-  //   console.log($event.key);
-
+  // onKeyup($event: any) {
   //   // This below code run when we enter "Enter" key
-  //   if ($event.keyCode === 13) {
-  //     console.log('Enter key pressed');
-  //   }
+  //   console.log('Enter key pressed: ', $event.target.value);
   // }
 
-  // ---------------------------
+  // TEMPLATE VARAIABLE APPORACH
 
-  // Event Filtering
-
-  onKeyup() {
+  onKeyup(value: string) {
     // This below code run when we enter "Enter" key
-    console.log('Enter key pressed');
+    console.log('Enter key pressed: ', value);
   }
 }
