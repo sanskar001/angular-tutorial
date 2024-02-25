@@ -1,4 +1,7 @@
 <h1>App Heading - {{ title }}</h1>
 
-<app-navbar></app-navbar>
-<app-post></app-post>
+<!-- String Interpolation -->
+<!-- <img src="{{ imgUrl }}" alt="Image Alter text" /> -->
+
+<!-- Better Approach - Property Binding -->
+<img [src]="imgUrl" alt="Image Alter text" />
