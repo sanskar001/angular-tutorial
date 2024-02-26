@@ -1,24 +1,14 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
+import { FirstTaskComponent } from './first-task/first-task.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule],
+  imports: [RouterOutlet, FirstTaskComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  username: string = '';
-
   constructor() {}
-
-  // onKeyup(value: string) {
-  //   console.log('Username:', value);
-  // }
-
-  submitHandler() {
-    console.log('Two way data-binding:', this.username);
-  }
 }

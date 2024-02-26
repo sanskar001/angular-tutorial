@@ -1,0 +1,43 @@
+<div class="flex-center">
+  <div class="first-task-container">
+    <h2 class="text-center">Angular First Task</h2>
+    <div class="flex-col flex-center">
+      <input type="text" placeholder="Post title" [(ngModel)]="postTitle" />
+      <textarea
+        name="postDetail"
+        id="postDetail"
+        placeholder="Post Detail"
+        cols="30"
+        rows="10"
+        [(ngModel)]="postDetail"
+      ></textarea>
+      <input
+        type="url"
+        name="postImageUrl"
+        id="postImageUrl"
+        placeholder="Post image url"
+        [(ngModel)]="postImageUrl"
+      />
+      <input
+        type="url"
+        name="infoLink"
+        id="infoLink"
+        placeholder="Add link for more info"
+        [(ngModel)]="moreInfoLink"
+      />
+      <img
+        [src]="postImageUrl"
+        alt="Post image"
+        [style.display]="postImageUrl ? 'inline-block' : 'none'"
+      />
+      <h1>{{ postTitle }}</h1>
+      <p>{{ postDetail }}</p>
+      <a
+        [href]="moreInfoLink"
+        target="_blank"
+        [style.display]="moreInfoLink ? 'inline' : 'none'"
+        >More Info</a
+      >
+    </div>
+  </div>
+</div>

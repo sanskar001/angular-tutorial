@@ -1,0 +1,25 @@
+.flex-col {
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-task-container {
+  width: 60%;
+  margin-top: 20px;
+  font-family: sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
+
+input,
+textarea {
+  padding: 8px;
+}
