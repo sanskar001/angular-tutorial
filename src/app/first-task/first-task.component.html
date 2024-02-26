@@ -25,12 +25,17 @@
         placeholder="Add link for more info"
         [(ngModel)]="moreInfoLink"
       />
+      <div>
+        <input type="checkbox" name="addBg" id="addBg" [(ngModel)]="addBg" />
+        <label for="addBg">Add Background</label>
+      </div>
+
       <img
         [src]="postImageUrl"
         alt="Post image"
         [style.display]="postImageUrl ? 'inline-block' : 'none'"
       />
-      <h1>{{ postTitle }}</h1>
+      <h1 [class.highlight]="addBg">{{ postTitle }}</h1>
       <p>{{ postDetail }}</p>
       <a
         [href]="moreInfoLink"

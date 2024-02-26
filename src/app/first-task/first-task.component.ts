@@ -13,6 +13,7 @@ export class FirstTaskComponent {
   postDetail: string = '';
   postImageUrl: string = '';
   moreInfoLink: string = '';
+  addBg: boolean = false;
 
   constructor() {}
 }

@@ -23,3 +23,7 @@ input,
 textarea {
   padding: 8px;
 }
+
+.highlight {
+  background-color: yellow;
+}
